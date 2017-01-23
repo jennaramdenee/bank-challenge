@@ -11,20 +11,20 @@
   BankStatement.prototype.printContents = function(){
     var output = ""
     this.transactions.reverse().forEach(function(transaction){
-      output += ("           " + transaction.date).slice(-11) + "||"
-      if (transaction.credit === true){
-        output += ("           " + transaction.value.toFixed(2)).slice(-11) + "||           ||"
+      output += "<tr><td>" + transaction.date + "</td>"
+      if (transaction.type === "Credit"){
+        output += "<td>" + transaction.value.toFixed(2) + "</td><td></td>"
       }
-      else if (transaction.debit === true){
-        output += "           ||" + ("           " + transaction.value.toFixed(2)).slice(-11) + "||"
+      else {
+        output += "<td></td><td>" + transaction.value.toFixed(2) + "</td>"
       }
-      output += ("           " + transaction.balance.toFixed(2)).slice(-11) + "\n"
+      output += "<td>" + transaction.balance.toFixed(2) + "</td></tr>"
     })
     return output
   }
 
   BankStatement.prototype.printHeader = function(){
-    return header = "Date       ||Credit     ||Debit      ||Balance    \n"
+    return header = "<tr><th>Date</th><th>Credit</th><th>Debit</th><th>Balance</th></tr>"
   }
 
   BankStatement.prototype.printStatement = function(){
