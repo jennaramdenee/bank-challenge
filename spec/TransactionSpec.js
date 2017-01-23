@@ -36,24 +36,18 @@ describe("Transaction Management", function(){
 
   describe("Type", function(){
 
-    it("can store if type of transaction is credit, defaulted to 'null'", function(){
-      expect(transaction.credit).toBeDefined()
-    })
-
-    it("can store if type of transaction is debit, defaulted to 'null'", function(){
-      expect(transaction.debit).toBeDefined()
+    it("can store type of transaction, defaulted to 'null'", function(){
+      expect(transaction.type).toBeDefined()
     })
 
     it("can set the type of transaction to 'credit'", function(){
       transaction.setAsCredit()
-      expect(transaction.credit).toEqual(true)
-      expect(transaction.debit).toEqual(false)
+      expect(transaction.type).toEqual("Credit")
     })
 
     it("can set the type of transaction to 'debit'", function(){
       transaction.setAsDebit()
-      expect(transaction.debit).toEqual(true)
-      expect(transaction.credit).toEqual(false)
+      expect(transaction.type).toEqual("Debit")
     })
 
   })

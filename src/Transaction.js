@@ -2,8 +2,7 @@
 
   function Transaction(balance, value){
     this.date = this.generateDate()
-    this.credit = null
-    this.debit = null
+    this.type = null
     this.balance = balance
     this.value = value
   }
@@ -17,13 +16,11 @@
   }
 
   Transaction.prototype.setAsCredit = function(){
-    this.credit = true
-    this.debit = false
+    this.type = "Credit"
   }
 
   Transaction.prototype.setAsDebit = function(){
-    this.debit = true
-    this.credit = false
+    this.type = "Debit"
   }
 
   exports.Transaction = Transaction
