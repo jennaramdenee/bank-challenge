@@ -5,7 +5,7 @@ function BankAccount(){
 
 BankAccount.prototype.deposit = function(value){
   this.balance += value
-  var transaction = new Transaction()
+  var transaction = new Transaction(this.balance)
   transaction.setAsCredit()
 }
 
@@ -16,7 +16,7 @@ BankAccount.prototype.withdraw = function(value){
   else {
     throw new Error("Not enough funds")
   }
-  var transaction = new Transaction()
+  var transaction = new Transaction(this.balance)
   transaction.setAsDebit()
 }
 
