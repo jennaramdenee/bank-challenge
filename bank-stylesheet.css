@@ -1,0 +1,12 @@
+body {
+  font-family: Calibri;
+  font-size: 15px;
+}
+
+.transaction {
+  padding: 10px;
+}
+
+.method {
+  padding: 10px;
+}
