@@ -1,10 +1,28 @@
 body {
   font-family: "Verdana";
   font-size: 15px;
+  background-color: #ccdfff;
+}
+
+th {
+  padding: 20px;
+}
+
+td {
+  padding: 20px;
+  text-align: center;
+}
+
+tr {
+  border-style: solid;
+  border-color: #bec0c4;
+  border-width: 2px;
 }
 
 .transaction {
   padding: 10px;
+  background-color: #fff;
+  height: 50px;
 }
 
 .method {

@@ -5,13 +5,13 @@ $(document).ready(function(){
   updateView()
 
   function updateView(){
-    $('#show-balance').text(bankAccount.showBalance())
+    $('#show-balance').text(bankAccount.showBalance().toFixed(2))
   }
 
 
   $('#get-statement').on('click', function(event){
     event.preventDefault();
-    $('#show-statement').text(bankAccount.statement.printStatement())
+    $('#show-statement').html(bankAccount.statement.printStatement())
   })
 
   $('#transaction').on('submit', function(event){
