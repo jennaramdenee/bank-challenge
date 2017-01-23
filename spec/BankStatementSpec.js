@@ -43,7 +43,7 @@ describe("Bank Statement", function(){
     bankStatement.addTransaction(testTransaction2)
     content = "23/01/2017 ||           ||4.00       ||20.00      \n"
     content2 = "22/01/2017 ||6.00       ||           ||32.00      \n"
-    expect(bankStatement.printContents()).toEqual(content + content2)
+    expect(bankStatement.printContents()).toEqual(content2 + content)
   })
 
   it("can print out full statement", function(){

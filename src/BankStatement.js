@@ -10,7 +10,7 @@
 
   BankStatement.prototype.printContents = function(){
     var output = ""
-    this.transactions.forEach(function(transaction){
+    this.transactions.reverse().forEach(function(transaction){
       output += ("           " + transaction.date).slice(-11) + "||"
       if (transaction.credit === true){
         output += ("           " + transaction.value.toFixed(2)).slice(-11) + "||           ||"
