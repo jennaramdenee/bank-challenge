@@ -1,12 +1,14 @@
 function BankAccount(){
   this.INITIAL_BALANCE = 0
   this.balance = this.INITIAL_BALANCE
+  this.statement = new BankStatement()
 }
 
 BankAccount.prototype.deposit = function(value){
   this.balance += value
-  var transaction = new Transaction(this.balance)
+  var transaction = new Transaction(this.balance, value)
   transaction.setAsCredit()
+  this.finishTransaction(transaction)
 }
 
 BankAccount.prototype.withdraw = function(value){
@@ -16,10 +18,15 @@ BankAccount.prototype.withdraw = function(value){
   else {
     throw new Error("Not enough funds")
   }
-  var transaction = new Transaction(this.balance)
+  var transaction = new Transaction(this.balance, value)
   transaction.setAsDebit()
+  this.finishTransaction(transaction)
 }
 
 BankAccount.prototype.makeBalanceNegative = function(value){
   return this.balance - value < 0
+}
+
+BankAccount.prototype.finishTransaction = function(transaction){
+  this.statement.addTransaction(transaction)
 }
