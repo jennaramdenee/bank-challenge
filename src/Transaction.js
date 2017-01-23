@@ -4,8 +4,8 @@
     this.date = this.generateDate()
     this.credit = null
     this.debit = null
-    this.balance = balance.toFixed(2)
-    this.value = value.toFixed(2)
+    this.balance = balance
+    this.value = value
   }
 
   Transaction.prototype.generateDate = function(){
