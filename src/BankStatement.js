@@ -1,7 +1,13 @@
-function BankStatement(){
-  this.transactions = []
-}
+(function(exports){
 
-BankStatement.prototype.addTransaction = function(transaction){
-  this.transactions.push(transaction)
-}
+  function BankStatement(){
+    this.transactions = []
+  }
+
+  BankStatement.prototype.addTransaction = function(transaction){
+    this.transactions.push(transaction)
+  }
+
+  exports.BankStatement = BankStatement
+  
+})(this);
