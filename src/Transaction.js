@@ -1,20 +1,27 @@
-function Transaction(balance){
-  this.date = this.generateDate()
-  this.type = null
-}
+(function(exports){
 
-Transaction.prototype.generateDate = function(){
-  var d = new Date()
-  var day = d.getDate().toString()
-  var month = (d.getMonth() + 1).toString()
-  var year = d.getUTCFullYear().toString()
-  return ("0" + day).slice(-2) + "/" + ("0" + month).slice(-2) + "/" + year
-}
+  function Transaction(balance){
+    this.date = this.generateDate()
+    this.type = null
+    this.balance = balance
+  }
 
-Transaction.prototype.setAsCredit = function(){
-  this.type = "Credit"
-}
+  Transaction.prototype.generateDate = function(){
+    var d = new Date()
+    var day = d.getDate().toString()
+    var month = (d.getMonth() + 1).toString()
+    var year = d.getUTCFullYear().toString()
+    return ("0" + day).slice(-2) + "/" + ("0" + month).slice(-2) + "/" + year
+  }
 
-Transaction.prototype.setAsDebit = function(){
-  this.type = "Debit"
-}
+  Transaction.prototype.setAsCredit = function(){
+    this.type = "Credit"
+  }
+
+  Transaction.prototype.setAsDebit = function(){
+    this.type = "Debit"
+  }
+
+  exports.Transaction = Transaction
+
+})(this);

@@ -6,6 +6,14 @@ describe("Transaction Management", function(){
     transaction = new Transaction(20)
   })
 
+  describe("Balance", function(){
+
+    it("can take balance as argument and store in property", function(){
+      expect(transaction.balance).toEqual(20)
+    })
+    
+  })
+
   describe("Date", function(){
 
     it("can store date of transaction", function(){
