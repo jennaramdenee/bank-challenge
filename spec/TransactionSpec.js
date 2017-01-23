@@ -9,15 +9,15 @@ describe("Transaction Management", function(){
   describe("Balance", function(){
 
     it("can take balance as argument and store in property", function(){
-      expect(transaction.balance).toEqual(20)
+      expect(transaction.balance).toEqual("20.00")
     })
 
   })
 
-  describe("Balance", function(){
+  describe("Value", function(){
 
     it("can take value as argument and store in property", function(){
-      expect(transaction.value).toEqual(3)
+      expect(transaction.value).toEqual("3.00")
     })
 
   })
