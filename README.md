@@ -45,3 +45,30 @@ As a user,
 So that I can understand how the amount of money I have left in my account has changed
 I want to be able to see my balance at each transaction on my statement
 ```
+
+### How to Use
+
+1. Open `index.html` in your browser
+
+2. Create a new bank account in the console
+```
+acc = new BankAccount()
+```
+
+3. Deposit some money to get started
+```
+acc.deposit(20)
+```
+
+4. Make a withdrawal
+```
+acc.withdraw(13)
+```
+
+5. Print statement to see recent transactions
+```
+acc.statement.printStatement()
+Date       ||Credit     ||Debit      ||Balance    
+ 23/01/2017||      45.00||           ||      45.00
+ 23/01/2017||           ||       2.00||      43.00
+```
