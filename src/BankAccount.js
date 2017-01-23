@@ -4,6 +4,10 @@ function BankAccount(){
   this.statement = new BankStatement()
 }
 
+BankAccount.prototype.showBalance = function(){
+  return this.balance
+}
+
 BankAccount.prototype.deposit = function(value){
   this.balance += value
   var transaction = new Transaction(this.balance, value)

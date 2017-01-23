@@ -12,6 +12,10 @@ describe("Bank Account", function(){
       expect(bankAccount.balance).toEqual(0)
     })
 
+    it("can show balance", function(){
+      expect(bankAccount.showBalance()).toEqual(0)
+    })
+
     it("can increase the balance when a defined deposit is made", function(){
       bankAccount.deposit(3)
       expect(bankAccount.balance).toEqual(3)
