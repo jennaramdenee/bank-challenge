@@ -6,12 +6,20 @@ Project to create a basic program that allows a user to create a virtual bank ac
 ### User Stories
 ```
 As a user,
+So that I can start using my account
+I want to be able to open a bank account with zero balance
+
+As a user,
 So that I can save my money
-I want to be able to make a deposit
+I want to be able to make a deposit that increases my balance
 
 As a user,
 So that I can use my money
-I want to be able to withdraw money
+I want to be able to withdraw money that decreases my balance
+
+As a user,
+So that I can't use money I don't have
+I don't want to be able to withdraw money that is not available
 
 As a user,
 So that I can understand my recent transactions
