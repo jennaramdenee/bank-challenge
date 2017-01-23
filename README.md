@@ -57,18 +57,18 @@ acc = new BankAccount()
 
 3. Deposit some money to get started
 ```
-acc.deposit(20)
+acc.deposit(45)
 ```
 
 4. Make a withdrawal
 ```
-acc.withdraw(13)
+acc.withdraw(2)
 ```
 
 5. Print statement to see recent transactions
 ```
 acc.statement.printStatement()
 Date       ||Credit     ||Debit      ||Balance    
- 23/01/2017||      45.00||           ||      45.00
  23/01/2017||           ||       2.00||      43.00
+ 23/01/2017||      45.00||           ||      45.00
 ```
