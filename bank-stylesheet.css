@@ -1,5 +1,5 @@
 body {
-  font-family: Calibri;
+  font-family: "Verdana";
   font-size: 15px;
 }
 
@@ -13,4 +13,8 @@ body {
 
 .statement {
   padding: 10px;
+}
+
+#show-statement {
+  padding: 5px;
 }
