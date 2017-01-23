@@ -3,7 +3,7 @@ describe("Bank Account", function(){
   var bankAccount;
 
   beforeEach(function(){
-    bankAccount = new BankAccount();
+    bankAccount = new BankAccount()
   })
 
   it("can store an initial balance of zero", function(){
@@ -27,6 +27,19 @@ describe("Bank Account", function(){
 
   it("can throw an error if a withdrawal reduces balance below zero", function(){
     expect(function(){bankAccount.withdraw(2)}).toThrow(new Error("Not enough funds"))
+  })
+
+  it("creates a new transaction and sets type as credit every time a deposit is made", function(){
+    spyOn(Transaction.prototype, "setAsCredit")
+    bankAccount.deposit(10);
+    expect(Transaction.prototype.setAsCredit).toHaveBeenCalled();
+  })
+
+  it("creates a new transaction and setes type as debit every time a withdrawal is made", function(){
+    spyOn(Transaction.prototype, "setAsDebit")
+    bankAccount.deposit(10);
+    bankAccount.withdraw(4);
+    expect(Transaction.prototype.setAsDebit).toHaveBeenCalled();
   })
 
 })
