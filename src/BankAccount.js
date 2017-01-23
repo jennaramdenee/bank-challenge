@@ -3,10 +3,6 @@ function BankAccount(){
   this.balance = this.INITIAL_BALANCE
 }
 
-BankAccount.prototype.showBalance = function(){
-  return this.balance
-}
-
 BankAccount.prototype.deposit = function(value){
   this.balance += value
 }
