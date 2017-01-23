@@ -32,7 +32,7 @@ describe("Bank Statement", function(){
   })
 
   it("can print header of statement", function(){
-    header = "Date       ||Credit    ||Debit    ||Balance   \n"
+    header = "Date       ||Credit     ||Debit      ||Balance    \n"
     expect(bankStatement.printHeader()).toEqual(header)
   })
 
@@ -41,16 +41,16 @@ describe("Bank Statement", function(){
     var testTransaction2 = new TransactionDouble2()
     bankStatement.addTransaction(testTransaction)
     bankStatement.addTransaction(testTransaction2)
-    content = "23/01/2017 ||          ||4.00      ||20.00     \n"
-    content2 = "22/01/2017 ||6.00      ||          ||32.00     \n"
+    content = "23/01/2017 ||           ||4.00       ||20.00      \n"
+    content2 = "22/01/2017 ||6.00       ||           ||32.00      \n"
     expect(bankStatement.printContents()).toEqual(content + content2)
   })
 
   it("can print out full statement", function(){
     var testTransaction = new TransactionDouble()
     bankStatement.addTransaction(testTransaction)
-    header = "Date       ||Credit    ||Debit    ||Balance   \n"
-    content = "23/01/2017 ||          ||4.00      ||20.00     \n"
+    header = "Date       ||Credit     ||Debit      ||Balance    \n"
+    content2 = "22/01/2017 ||6.00       ||           ||32.00      \n"
     expect(bankStatement.printStatement()).toEqual(header + content)
   })
 
