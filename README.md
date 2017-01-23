@@ -48,27 +48,44 @@ I want to be able to see my balance at each transaction on my statement
 
 ### How to Use
 
-1. Open `index.html` in your browser
+##### Option 1: Console
 
-2. Create a new bank account in the console
+* Fork and clone this repository
+
+* Open `index.html` in your browser
+
+* Create a new bank account in the console
 ```
 acc = new BankAccount()
 ```
 
-3. Deposit some money to get started
+* Deposit some money to get started
 ```
 acc.deposit(45)
 ```
 
-4. Make a withdrawal
+* Make a withdrawal
 ```
 acc.withdraw(2)
 ```
 
-5. Print statement to see recent transactions
+* Print statement to see recent transactions
 ```
 acc.statement.printStatement()
+
 Date       ||Credit     ||Debit      ||Balance    
  23/01/2017||           ||       2.00||      43.00
  23/01/2017||      45.00||           ||      45.00
 ```
+
+##### Option 2:
+
+* Fork and clone this repository
+
+* Open `index.html` in your browser
+
+* Enter type of transaction (debit vs. credit) using drop down menu, and type in value corresponding to the transaction
+
+* Click `Add` to complete the transaction
+
+* Click `Generate Statement` to show recent transactions on the page
