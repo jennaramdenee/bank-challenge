@@ -1,32 +1,33 @@
 body {
   font-family: "Verdana";
-  font-size: 15px;
-  background-color: #ccdfff;
+  font-size: 12px;
 }
 
 th {
-  padding: 20px;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
 }
 
 td {
-  padding: 20px;
-  text-align: center;
-}
-
-tr {
-  border-style: solid;
-  border-color: #bec0c4;
-  border-width: 2px;
-}
-
-.transaction {
   padding: 10px;
-  background-color: #fff;
-  height: 50px;
+  text-align: center;
+  border: 1px solid #d9d9d9;
+}
+
+.balance {
+  padding: 10px;
+  height: 30px;
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f2f2f2;
 }
 
 .method {
   padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .statement {
@@ -34,5 +35,10 @@ tr {
 }
 
 #show-statement {
-  padding: 5px;
+  padding: 20px 10px;
+}
+
+
+#transaction {
+  padding: 10px;
 }
